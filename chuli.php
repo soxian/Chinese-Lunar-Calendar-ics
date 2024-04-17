@@ -13,7 +13,7 @@ foreach($date_array[1] as $k=>$v){
 	$datestr = date('n-j',$datenum);
 	$nl_date = $nl_array[1][$k];
 	$week = $weekarray[date('w',$datenum)];
-	$full_date = ' '.$nl_date.','.$week.' '.$datestr;
+	$full_date = $nl_date.','.$week.' '.$datestr;
 	$content = str_replace("{$v}T235900\nSTATUS:CONFIRMED\n{$nl_array[0][$k]}","{$v}T235900\nSTATUS:CONFIRMED\nSUMMARY:{$full_date}",$content);
 }
 
