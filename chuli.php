@@ -5,7 +5,7 @@ $content = file_get_contents($file);
 preg_match_all('/DTSTART;VALUE=DATE:(\d+)T/',$content,$date_array);
 preg_match_all('/SUMMARY:(.+)/',$content,$nl_array);
 
-$weekarray=array("日","一","二","三","四","五","六"); //先定义一个数组
+$weekarray=array("周日","周一","周二","周三","周四","周五","周六"); //先定义一个数组
 
 foreach($date_array[1] as $k=>$v){
 	unset($datenum,$datestr,$nl_date,$full_date,$week);
